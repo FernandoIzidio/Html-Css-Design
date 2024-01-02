@@ -1,0 +1,57 @@
+.flex-container {
+    display: flex;
+    justify-content: space-between;  
+    background-color: yellow;  
+    flex-wrap: wrap;
+}
+
+
+.flex-item{
+    cursor: pointer;
+    display: flex;
+    /*
+    flex-flow - Short-hand de flex-direction com flex-wrap
+    flex-flow: direction break;
+    direction defina a reta principal das caixas filhas filhas
+    break - Define se vai ter quebra ou não, casa as caixas filhas não caibam na reta principal
+    */
+    background-color: purple;
+    color: white;
+    
+    /*Todas as caixas filhas vão ter largura de mesma proporção*/
+    /*Flex-basis - Define largura inicial de uma caixa filha, e o espaço que sobrar é dividido entre as caixas filhas */
+    flex-basis: 200px;
+    /*Todas as caixas filhas vão receber a mesma proporção de espaço em branco, se o valor fosse 2 em uma caixa filha, essa caixa filha receberia o dobro de espaço em branco em relação aos demais*/
+    flex-grow: 1;
+    height: 200px;
+    /*Se a caixa pai diminuir as caixas filhas vão diminuir na mesma proporção, podendo ficar menores do que o definido pelo flex-basis, flex shrink permite que uma caixa filha diminua*/
+    flex-shrink: 1;
+
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+
+    font-size: 100%;
+    margin-bottom: 5px;
+}
+
+
+.flex-item:active + div {
+    background-color: blue;
+}
+
+/*Selecionei todas as caixas da classe flex-item com
+nth-child(1n),
+Agora selecionei apenas a primeira caixa com class flex-item*/
+.flex-item:nth-child(1) {
+    /*Essa caixa vai ter o dobro de espaço em branco em relação as demais*/
+    flex-grow: 2;
+    background-color: hotpink;
+}
+
+
+.flex-item:hover {
+    background-color: plum;
+    
+}

@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*Caixa pai com display flex por padrão coloca todas as caixas filhas com display in line */
+.flex-container {
+    height: 200px;
+    display: flex;
+    background-color: yellow;
+    flex-direction: row;
+    /*Usado para alinha caixas filhas na linha principal*/
+    justify-content: space-evenly;
+    /*Alinha todas as linha e caixas no centro da perpendicular*/
+    align-content: center;
+    /*Se as caixas filhas não couberem na linha principal, é feita uma quebra de linha*/
+    flex-wrap: wrap;
+    
+}
+
+.child-father {
+    gap: 3px;
+    display: flex;
+    flex-direction: row;
+    /*Se as caixas filhas não couberem na reta principal é feito uma quebra de linha*/
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+
+}
+
+.flex-item {
+    width: max-content !important;
+    padding: 4px;
+    background-color: purple;
+    margin: 4px 0px;
+}
+
+.flexion {
+    display: flex;
+    background-color: greenyellow;
+    gap: 3px;
+    justify-content: space-evenly;
+    height: 800px;
+    align-items: center;
+    margin: 50px;
+}
+
+
+.flexi {
+    color: white;
+    width: max-content;
+    background-color: blue;
+    padding: 4px;
+}
+
+.flexi:nth-child(1) {
+    align-self: flex-start;
+    order: 1;
+}
+
+.flexi:nth-child(2) {
+    align-self: stretch;
+}
+
+.flexi:nth-child(3n + 3) {
+    align-self: flex-end;
+}
+
+.flexi:nth-child(4){
+    order: -1;
+}
+

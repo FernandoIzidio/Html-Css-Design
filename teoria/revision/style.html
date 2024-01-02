@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+
+
+        .especial {
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+            color: white;
+            background-color: red;
+            width: 100px;
+            height: 100px;
+            margin: auto;
+            position: relative;
+        }
+
+        .especial:hover {
+            background-color: orange;
+        }
+
+        .especial:hover::after {
+            position: absolute;
+            
+            content: '_';
+            color: purple;
+            width: 100%;
+            height: 4px;
+            top: 35%;
+            left: 45%;
+            
+        }
+
+        .especial::selection {
+            background-color: transparent;
+        }
+
+        .especial:active {
+            background-color: greenyellow;
+        }
+
+        
+        
+    </style>
+</head>
+<body>
+    <main>
+    <h1>
+        Cascading Style Sheet
+    </h1>
+
+    <p>Conhecido como Cascading Style Sheet, ou folha de estilo em cascata o CSS é uma linguagem de estilização que permite personalizar sites de forma consisa, e até mesmo criar animações profissionais</p>
+
+        <h2>Extrutura </h2>
+        
+        
+        <p> O CSS funciona ao lado do HTML, e é usado para atribuir propriedades de estilo a tags HTML, o CSS atribui propriedades de estilo a tags HTML por meio de seletores, as propriedades podem ser aplicadas por chave e valor property: value; sendo sempre delimitadas por prop: value; </p>
+
+            <h3>Seletores</h3>
+            <pre>
+            <b>tag, tag {}</b> -Aplica propriedades as duas tags selecionadas
+
+            <b>* {}</b> - Seleciona todas as tags do html
+
+            <b>tag</b> - Seleciona todos as tags de valor tag
+
+            <b>.class</b> - Seleciona uma tag por classe
+
+            <b>#id</b> - Seleciona uma tag por identificador
+
+            <b>tag tag2</b> - Seleciona uma tag2 que esta dentro de tag, independente se tag2 esteja dentro de outra tag, ou seja esse seletor vai pegar os filhos e netos que corresponderem aos valores
+
+            <b>tag > tag2</b> - Pega apenas a tag2 que for diretamente filha de tag 
+
+            <b>.class.class2</b> - Seleciona apenas as tags que tiverem ambas as classes
+
+            <b>tag1+tag2</b> - Seleciona a primeira tag2 que estiver no mesmo escopo, ou estiver ao lado da tag1, ou seja vai selecionar a primeira tag2 irmã a tag1
+
+            <b>tag1~tag2</b> - Seleciona todas as tags2  diretamente irmãs a tag1
+
+            <b>[attr]{}</b> - Seleciona apenas tags que tem determinado atributo
+
+            <b>[attr="value"]</b> - Seleciona apenas tags que tiverem determinado apenas valor especificado no atributo
+
+            <b>[attr~="value"]</b> - Seleciona apenas tags que tiverem pelo menos o valor no atributo
+
+            <b>[attr^="value"]</b> - Seleciona apenas tags que começarem com determinado valor de atributo
+
+            <b>[attr$="value"]</b> - Seleciona apenas tags que terminarem com os valores de atributos especificados
+        </pre>
+        <h2>Unidades de medida</h2>
+        
+            <h3>Absolute lenghts</h3>
+
+            <p>Unidades de medidas de tamanhos absolutos tem valor fixo, e não mudam independente do tamanho dos outros elementos. Exemplos:</p>
+
+            - px 
+
+            <h3>Relative lenghts</h3>
+
+            <p>Unidades de medidas de tamanhos relativos referênciam o tamanho de outras tags, ou seja o tamanho da tag pode mudar se o tamanho de outras mudarem. Exemplos:</p>
+            <pre>
+                <b>%</b> - Referência a parent-box
+                <b>em</b> - Referência a parent-box
+                <b>rem</b> - Referência o font-size do root(tag html)
+                <b>vw</b> - Referência a largura da viewport(largura do dispositivo)
+                <b>vh</b> - Referência a altura da viewport(altura do dispositivo)
+                <b>fr</b> - Referência o espaço em branco da parent box
+                <b>vmin</b> - Referência o menor tamanho da viewport
+                <b>vmax</b> - Referência o maior tamanho da viewport
+            </pre>
+
+            
+        <h2>Pseudo-Classes</h2>
+
+        <p>Pseudo classes estão mais ligados ao estado das tags, existem varios tipos de pseudo classes para aplicar estilos, conforme o estado dos elementos, e as peseudo classes mais comuns: </p>
+
+        <pre>
+            -Hover - Aplica estilo quando o mouse passar por cima
+            -link - Aplica estilo em link nunca visitado, ou botão nunca pressionado
+            -visited - Aplica estilo em link visitado, ou botão pressionado
+            -focus - Quando o elemento estiver em foco, ou seja quando o usuário estiver interagindo com um elemento esse estilo vai ser aplicado
+            -active - Aplica estilo em elemento clicado
+            -disabled - Se a tag estiver desabilitada, aplica estilo
+            -enabled - Se a tag estiver habilitada, aplica estilo
+            -checked - Se a tag estiver marcada em uma checkbox, aplica estilo
+            -required - Aplica estilo em todas tags com atributo required
+            -target - Aplica estilo em elemento, se seu id estiver na url da pagina
+            - tag:not(#id/.classe/:estado) - Seleciona todas as tags que não tenham o id/classe/estado especificado
+
+            - tag:empty - Seleciona elementos que não tem filhos
+            - tag:nth-child(indice) - Seleciona todas as tags, que tiverem o estado de posição correspondente ao indice, ou seja a tag filha que estiver na posição indice
+            - tag:nth-child(xn) - Seleciona os filhos de x em x
+            - - tag:nth-child(xn + y) - Seleciona os filhos de x em x, começando a contar a partir de y
+            - tag:nth-child(even) - Seleciona todas as tags, que tiverem o estado de posição par, ou seja todas as tags filhas que estiverem na posição par
+            - tag:nth-child(odd) - Seleciona todas as tags, que tiverem o estado de posição impar, ou seja todas as tags filhas que estiverem na posição impar
+
+            - tag:first-child - Seleciona tag que estiver com o estado de primeiro filho
+            - tag:last-child - Seleciona tag que estvier com o estado de ultimo filho
+        </pre>
+        
+        <h2>Pseudo-Elementos</h2>
+
+        <p>Normalmente são usados para criar tags, antes ou após outros tags, ou seja pseudo elementos estão mais relacionados com conteúdo. Exemplos</p>
+        <pre>
+            - tag1::before - Cria nova tag antes da tag1
+            - tag1::after - Cria nova tag depois de tag1
+            - tag1::first-letter - Seleciona primeira letra do conteúdo de uma tag
+            - tag::selection - Se a tag estiver sendo selecionada com o mouse para fazer control+c aplicar estilo
+            - tag::first-line - Seleciona primeira linha de uma tag
+            - tag::placeholder - Aplica estilo no placeholder de uma tag
+        </pre>
+
+
+
+        <h2>Especificidade</h2>
+        
+        <p> Especificidade é a principal regra, ou regra que ocupa o topo da hierarquia na hora de aplicar um estilo em uma tag, quanto maior o nivel de especificidade de um elemento, mais força o estilo desse elemento ganha sobre outras regras de estilos</p>
+
+        <pre>
+            <b>id</b> - seletores de maior especificidade, para sobrepor o estilo de um seletor de id, somente com outro seletor de id
+            <b>classes, pseudoclasses, atributos</b> - tem mesmo valor de especificidade
+            <b>elementos, Pseudo-Elementos </b>- tem mesma especificidade e estão no nivel mais baixo da hierarquia de especificidade, ou seja qualquer seletor pode sobrepor um seletor que seleciona por tag, ou pseudo-elemento
+        </pre>
+
+        <p> propriedades que terminam com !important são aplicadas independente da Especificidade ou de qualquer atributo, mas se dois seletores feitos de forma diferentes, mas que selecionam a mesma tag, usam !important em suas propriedades, a especificidade será usada como critério de desempate, hierarquia:</p>
+        <pre>
+            1 - !important
+            2 - style - atributo
+            3 - id 
+            4 - classes, pseudo-classes, atributos
+            5 - elementos, pseudo-elementos
+        </pre>
+
+        <p>OBS: Atributo style, tem mais especificidade que um identificador/id</p>
+
+        <h2>Herança</h2>
+        <p>Determinadas propriedades de estilo podem ser herdadas por elementos filhos, aqui estão as propriedades de estilo mais comuns de serem herdadas por elementos filhos: </p>
+        <pre>
+            - cor
+            - fonte
+            - font-size
+        </pre>
+
+        <p> property: inital; Desativa a herança em uma propriedade, property: inherit; ativa a herança em uma propriedade</p>
+
+        <h2>Display Rules</h2>
+        <P>Dependendo do tipo de display de uma tag, ela pode ser incompativel com algumas propriedades, por exemplo:
+        <pre>
+            Display-Inline - uma tag com display in-line é incompativel com largura, altura, margin, padding, a tag's de display in-line ocupam apenas a largura de seu conteúdo</P>
+
+            Display-block - Se o conteúdo de uma tag com display block exceder a largura da tag, o conteúdo transborda o tamanho da tag
+        
+        </pre>
+
+
+
+
+        <h2>CSS position's</h2>
+        <p>
+            static-  posicionamento padrão, segueo fluxo normal do programa
+            relative - Segue o fluxo normal do programa, mas pode quebrar o fluxo com propriedades especificas(right, top, left, buttom e etc)
+            absolute - Se posiciona na tag root, ou se posiciona dentro de qualquer tag/box/element parent que não for static.
+            fixed - Vai ter uma posição fixa, independente da posição do scroll, normalmente usado em navbar
+            styck - Box/elemento/tag vai ficar fixo dentro de um elemento com scoll
+
+        </p>
+
+
+        <h2>Media Queries</h2>
+        <p>Media querie é um recurso muitas vezes usado para tornar o site mais responsivo para todo tipo de tela. Exemplo de Media Querie:</p>
+        @media screen and (max-width: xpx){}
+        @media print and (min-width: xpx){}
+        @media all and (min-width: xpx){}
+        <p>É recomendado usar break-point's existentes para tornar a responsividade do site mais fluída</p>
+
+        <h2>FlexBox</h2>
+        <p>Display Flex é um display muito utilizado posicionar os elementos filhos da parent-box de forma organizada, todo tag com diplay flex é box-level, seus filhos ficam posicionados em row, com a largura maxima de seu conteúdo</p>
+
+        <PRE>
+        <b>display:flex</b> - Define que a parent-box é display flex
+        
+        <b>flex-direction</b> - Define a direção que as caixas filhas vão seguir, se for o padrão(row), a reta principal vai ser a horitzontal, agora se o flex-direction for column a reta principal é a vertical
+
+        <b>flex-wrap</b> - Se as caixas filhas não couberem na reta principal faz a quebra de linha
+        -wrap - faz a quebra de linha se não couber
+
+        <B>Flex-Flow: direction wrap</B> - É uma shorthand para definir a direção das caixas filhas, e se vai ter quebra caso não caibam na reta principal
+
+        <b>flex-grow: x;</b> - Distribui igualmente o espaço que sobrar como tamanho para as caixas filhas, ou seja, todas as caixas filhas vão crescer na mesma proporção baseada no tamanho/espaço que sobrar
+
+        <b>flex-basis: xpx</b> - Define um tamanho minimo para as tags/caixas/elementos filhos
+
+        <b>flex-shrink</b>  - Define a proporção de redução das caixas filhas
+
+        <b>flex: grow shrink basis</b> - Short-hand para distribuir igualmente espaço que sobrar entre caixas filhas, para permitir que as caixas filhas fiquem menor que o basis, e defini um tamanho para as caixas filhas
+
+
+
+   
+
+
+        <b>align-content</b> - Alinha todas as linhas, ou seja alinha todo o conteúdo em uma posição da reta segundária
+
+        <b>justify-content</b> - Usado para alinhar caixas filhas em uma posição da reta principal
+                flex-start - Alinha no inicio da reta principal
+                center - Alinha ao centro da reta principal
+                flex-end - Alinha ao final da reta principal
+                stretch - Estica as caixas filhas em toda a largura da reta principal
+                space-around - Mesmo espaço apenas entre elementos
+                space-betwen - Mesmo espaço para todos os elementos, sem o espaçamento inicial da reta principal
+                space-evenly - Espaçamento é o mesmo para lugares preenchidos ou não
+
+
+        <b>align-items</b> - Usado para alinhar a linha das caixas filhas em uma posição da reta secundária
+                flex-start - Alinha no inicio da reta secundária
+                center - Alinha ao centro da reta secundária
+                flex-end - Alinha ao final da reta secundária
+                stretch - Estica caixas filhas até a largura da reta secundária
+
+
+        <b>align-self</b> - Alinha apenas um elemento da linha em uma posição da reta secundária, ao contrário do align-items que alinha uma linha de elementos/tags/box em uma posição da reta secundária
+
+        <b>order</b> - Define a ordem de uma caixa filha dentro de uma flex-box
+
+        Obs: É Possível fazer com que determinadas caixas filhas recebam o dobro de espaço em branco em relação as demais, ou diminuam com metade da proporção em relação as demais caixas
+        </PRE>
+        <h2>CSS GRID</h2>
+        <P>
+            É umd display muito usado para criação de layout's de páginas, ou para criação de tabelas, quando é precis que as caixas filhas se posicionem em muitas linhas ou colunas. Exemplos de propriedade:
+        </P>
+        <pre>
+            <b>display: grid; </b> - Define que a tag/elemento vai ter um display-grid
+            <b>grid-template-columns: size size...</b> - Define quantas colunas a grid vai ter
+                <b>obs: É possivel nomear colunas e linhas exemplo</b>
+                    grid-template-columns: [coluna1] 1fr [coluna2] 1fr; - assim ao invés de usar o indice para indicar quando uma linha ou coluna começa, é possível usar o nome da linha/coluna para determinar onde uma tag/elemento começa e termina, o nome deve ser usado sem o colchetes
+
+            <b>grid-template-rows: size size...</b> - Define quantas linhas a grid vai ter
+
+            <b>gap</b> - Define espaçamento entre linhas e colunas
+
+            <B>minmax(min, max)</B> - É usado em conjunto com grid-template-columns, ou grid-template-rows, para definir um tamanho minimo e maximo de um coluna ou linha
+
+            <b>auto-fill </b>- preencher de acordo com o espaço disponivel 
+
+            <b>repeat(auto-fill, minmax(x, y))</b> Essa função vai tentar criar o maior número de colunas possiveis referênciando o tamanho da tela, ou seja vai criar colunas com tamanho minmax, de acordo com o tamanho da tela
+
+
+            <b>grid-colunm-start</b> - Define em qual coluna uma tag/elemento vai começar
+            <b>grid-colunm-end</b>  - Define em qual coluna uma tag/elemento vai terminar 
+            
+            <b>grid-row-start</b> - Define em qual linha uma tag/elemento vai começar
+            <b>grid-row-end</b> - Define em qual linha um tag/elemento vai terminar
+
+            <b>grid-row: span x;| x / y</b>  - Define quantas linhas uma tag/elemento pode ocupar 
+            <b>grid-colunm: span x;| x / y</b> - Define quantas colunas uma tag/elemento pode ocupar
+
+            <b>grid-area: startrow / startcolunm / endrow / endcolunm</b> - Determina o inicio e o fim das linhas e colunas de uma tag/elemento,
+
+            <b>grid-area: name</b> - também pode ser usado para setar o areaname de uma tag/elemento
+            
+            <b>grid-template-area: 'areaname areaname...' 'areaname...' values...</b> - É usado para definir quantas colunas e em quais linhas uma tag/elemento vai se posicionar
+
+
+            <b>row-gap</b> - Define o espaçamento entre linhas
+            <b>column-gap </b> - Define o espaçamento entre colunas
+
+        </pre>
+            
+    
+
+        <h2>
+            Emmet Abbreviation
+        </h2>
+
+        <p>
+            São shortcuts usados para melhorar o desempenho e produtividades no vscode Exemplos:
+        </p>
+        <pre>
+            tag.class*4 - Cria quatro tags com uma classe especifica
+            tag#id1#id2.class1.class2*4 - Cria quatro tags  duas classes e um id, até porque não tem como ter dois id
+        </pre>
+        <pre>
+            # para setar o id de um elemento
+            . para setar a classe de um elemento
+            {} para setar o conteúdo de um elemento
+            [] para setar os atributos de um elemento
+            $ autocompletar conteúdo pelo indice
+            + elemento vizinho/adjacente
+            > elemento filho
+        </pre>
+
+        <h2>Regular property's</h2>
+            <h3>Text Property's</h3>
+            <b>color</b> - Define a cor do conteúdo
+
+            <b>background-color</b> - Altera cor de fundo de uma tag
+
+            <b>font-size</b> - Define o tamanho do texto
+
+            <b>font-weight</b> - Define se o texto é negrito ou não
+
+            <b>font-style</b> - Define se o texto é italico ou não
+
+            <b>font-family</b> - Define a fonte de um texto
+
+            <b>letter-spacing</b> - Define espaçamento entre as letras
+
+            <b>word-spacing</b> - Define espaçamento entre as palavras
+
+            <b>line-height</b> - Define altura da linha
+
+            <b>text-align</b> - Define alinhamento do texto
+
+            <b>text-ident</b> - Define a identação do texto
+
+            <b>direction</b> - Define a direção do texto:
+                -rtl - right to left direita pra esquerda
+                -ltr - Left to right, esquerda para direita
+
+            <b>text-decoration: value [value];</b> - Propriedade para definir decoração do texto, sublinhado e etc. Obs: É possivel combinar valores de text-decoration
+
+            <b>text-shadow: offset-horizontal offset-vertical blur spread color</b>
+
+            <b>text-transform: </b> - Transforma conteúdo do texto para minúsculo/maiúsculo, capitalize e etc
+
+
+
+            <p>value:</p>
+            <pre>
+                -none - sem decoração nenhuma
+                -underline - vai ter underline
+                -overline - vai ter uma linha acima do conteúdo
+                -line-trough - inseri uma linha atrávez do texto, ou seja vai riscar o texto
+            </pre>
+
+
+        <h2>Box-property's</h2>   
+       <pre>
+                
+        <b>repeat(number, values)</b> - Função css para repetir valores um determinado número de vezes
+
+        <b>gap</b> - Espaçamento entre linhas e colunas
+
+        <b>z-index</b> - Define a posição na camada de uma box/elemento
+
+        <b>padding</b> - shorthand para colocar espaçamento entre conteúdo e borda
+       </pre>
+
+        <b>border: width style color</b> - Short-hand que aplica uma borda de largura width, tipo style, e cor color em todos os lados da borda de uma box
+        <PRE>
+            style:
+                dotted - Cria borda pontilhada
+                solid - Cria borda normal
+                dashed - Cria borda tracejada
+                groove - Cria borda em formato 3d estilo quadro
+        </PRE>
+        <pre>
+        <b>margin</b> - short-hand para espaçamento após a borda
+
+        <b>float: direction;</b> - Flutua tag/box em uma direção escolhida, e libera espaço restante, o espaço restante é o espaço que sobrar descontando o tamanho do conteúdo da tag, padding, margin
+
+        <b>box-shadow: [direction=outset(inset)] offset-horizontal offset-vertical blur(nitidez/foco) spread(espalhamento) color</b> - Cria uma sombra externa ou interna dentro de uma tag
+        </pre>
+        clear: - Usado para limpar/remover/ocupar espaço
+        <pre>
+                left - Remove espaço a esquerda
+                right - remove espaço a direita
+                both - remove esapaço de ambos de lados
+        </pre>
+
+        <pre>
+            <b>content</b> - inseri conteúdo em uma tag
+            <b>border-radius</b> - Arrendonda uma tag/elemento
+            <b>width</b> - largura do conteúdo da tag se for content-box
+            <b>height</b> - altura do conteúdo da tag se for content-box
+            <b>box-sizing: </b> - Configura inclusão ou não de determinadas propriedades na somatoria de largura e altura
+                -content-box - Padrão, apenas a largura do conteúdo vai vai contar como tamanho da tag
+                -padding-box - O conteúdo e padding vão contar como tamanho da caixa
+                -border-box - O conteúdo, padding e borda vão contar como tamanho da caixa, ou seja quando eu criar uma caixa de 100px, a caixa vai ter exatamente 100px somando conteúdo, padding e borda
+            <b>transition: which time direction</b> - Define quanto tempo vai demorar para aplicar estilos em uma tag, e de qual ponto o estilo vai começar a ser aplicado
+            <b>overflow-x</b>
+            <b>overflow-y</b>
+            <b>overflow: value(hidden, scroll, auto)</b> - O conteúdo que exceder o largura e altura da tag, ele pode esconder o conteúdo que exceder, ou habilitar o rolagem lateral ou vertical com scroll, scroll habilita a rolagem independente se conteúdo passar ou não, auto habilita a rolagem somente se conteúdo exceder
+        </pre>
+
+    <div class="especial">Clica</div>
+
+
+</body>
+</html>

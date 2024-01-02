@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./estilos/standard.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="layout">
+        <section id="menu">
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="buttom" onclick="ocultarmenu('menu', 'openbuttom')">&lt;</div>
+
+        </section>
+
+        <div class="buttom" onclick="openmenu('menu', 'openbuttom')" id="openbuttom">&lt;</div>
+
+        <header>
+            <h1>Enterprise</h1>
+        </header>
+
+        <main>
+            <section id="#home"></section>
+            <section id="#about"></section>
+            <section id="#Services"></section>
+            <section id="#Contact"></section>
+
+        </main>
+
+    </div>
+
+    <script>
+        function ocultarmenu(idparent, button) {
+            let menu = document.getElementById(idparent)
+            let buttom = document.getElementById(button)
+
+            menu.style.display = 'none';
+            buttom.style.display = 'flex';            
+        }
+        
+        function openmenu(idparent, button){
+            let menu = document.getElementById(idparent, button)
+            let buttom = document.getElementById(button)
+
+            menu.style.display = 'flex';
+            buttom.style.display = 'none';
+        }
+    </script>
+</body>
+</html>

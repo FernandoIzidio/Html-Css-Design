@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Here there's the semantic structure of HTML5</h1>
+
+    <p><strong>Html Hiper Text Markup Language</strong>, é uma linguagem de marcação usada para criação de sites de forma simples, é uma linguagem de marcação no sensitive keys(Não importa se as tags estão maiúsculas ou não)</p>
+    <p><strong>!doctype html </strong>- Indica que o documento é do tipo HTML</p>
+
+    <p><strong>html</strong> -  Tag root do documento html</p>
+        <pre>
+            <strong>lang</strong> - Define a lingua do documento
+        </pre>
+
+    <p><strong>head</strong> - Define toda a parte comportamental do site, e define os metadados do documento, ou seja define a documentação do html</p>
+
+
+    <p><strong>title</strong> - Define o título da guia</p>
+
+    <p><strong>style</strong> - Responsavel pela estilização da página, segue a extrutura do css(Cascading Style Sheet)</p>
+
+    <p><strong>link</strong> - Conecta o documento html atual com outro documento</p>
+    <pre>
+        rel - Define o tipo de relação dessa conexão
+        href - Define o caminho do documento a ser conectado
+
+    </pre>
+    
+    <p> <strong>body </strong>- Define todos os dados que são visíveis no navegador</p>
+
+    <h2>Commmom Attributes</h2>
+    <p>Toda tag html pode ter atributos:</p>
+    <pre>
+        <strong>id</strong> - Define um identificador para uma tag, util para aplicar estilo a uma tag de forma eficaz, um id só pode ser usado em uma única tag
+        <strong>class</strong> - Define a classe da tag, ao contrário do ID, as classes podem ser usadas em varias, é uma maneira eficar de aplicar estilo em varias tags em um documento
+        <strong>name</strong> - Define o nome da tag, é como se fosse o nome da variavel da tag, isso é util para as linguagens back-end, porque assim cada tag vai se comportar como uma variavel no back-end
+        <strong>value</strong> - Define o valor da tag, ou seja o valor da váriavel
+        <strong></strong>
+    </pre>
+
+    <h2>Attributes Meta</h2>
+
+        <p>meta(usado para definer metadados(documentação) do documento):</p>
+        <pre>
+            <b>charset</b> - Define a codificação do documento html
+            <b>name</b> - Define o nome de um metadado
+            <b>content</b> - Define o conteúdo de um metadado
+        </pre>
+
+        <h3>Regular meta</h3>
+        <p><strong>meta name="viewport" content="width=device-width, initial-scale=1.0" </strong>- Define que a largura da página vai ser 100% da largura do dispositvo, ajuda a pagina não transbordar horizontalmente em telas mobile</p>
+
+    <p>Quando se está digitando algo no computador, os dados enviados ao computador não são letras, são bytes(organizados em uma extrutura e codificação do seu sistema), então oque o navegador recebe quando se está digitando algo, são apenas bytes extruturados, então por isso é importante definir a extrutura/codificação do navegador, para que ele possa converter esses bytes extruturados em letras de forma adequada</p>
+
+    <h2>Heading</h2>
+        <p>Heading são tags que vão de h1 a h6  e possuem uma certa extrutura hierarquica, organizar heading's em uma extrutura correta é essencial para mecanismos de busca, em resumo heading são como títulos e subtítulos, um documento pode ter vários h1, oque importa é que os heading tenham relação</p>
+
+    
+    <h2>Tags Type</h2>
+        <P><strong>Tags semânticas</strong>- Tags semânticas são tags que tem algum significado dentro da página, ou seja são tags que vão atribuir significado a página, são tags essenciais para leitores de tela e macanismos de busca</P>
+        <pre>
+            <b>strong</b> - Define que o conteúdo deve ser lido de forma mais forte por leitores visuais, tipo caixa alta
+            <b>em</b> - Da uma enfâse ao conteúdo, ou seja os leitores de tela vão dar uma enfâse no conteúdo ao ler essa tag
+            <b>del</b> - Indica para o leitor de tela que o conteúdo dessa tag foi riscado, corrigido, é normalmente usado em retificações de editais, para indicar correções
+            <b>ins</b> - Indica pro leitor de tela, que uma nova linha foi inserida
+            <b>small</b> - Leitor de tela vai ler o conteúdo mais baixo
+            <B>header</B> - tag usada para definir o cabeçalho da pagina, o cabeçalho de uma section, ou um cabeçalho de article
+            <b>main</b> - Define o conteúdo principal da página
+            <b>article</b> - Tag usada para comentários, posts em blogs, artigos, resusimndo é uma tag que vai conter um parte de conteúdo independente da página, pode ter uma header
+            <b>aside</b> - É uma tag que vai ter um conteúdo relacionado ao main, mas que não vai abordar o conteúdo principal da página, exemplo uma pagina que fala de uma nova contratação do são paulo, pode ter um asidebar falando dos proximos 5 jogos, ou seja aside é uma tag para inserir contéudos/tópicos relacionados a notícia principal, mas que não abordem diretamente o conteúdo principal
+            <b>address</b> - Tag usada para inserir endereços e informações de contato
+            <b>footer</b> - É o rodapé da página
+ 
+        </pre>
+
+        <P><strong>Tags não semânticas</strong>- São tags que só possuem estilo, e não possuem nenhum significado</P>
+
+
+        <p>É recomendado preterir tags semânticas, ao invés de tags não semânticas, pois isso torna o documento html mais consiSo e coeso, ou seja o html deve cuidar apenas da parte de significado, então por isso é recomendado usar tags semânticas, ao invés de tags não semânticas(apenas estilização), a estilização deve ficar apenas com o css</p>
+
+            <pre>
+            <strong>b</strong> - Define que o estilo do conteúdo é negrito
+            <strong>i</strong> - Define que o estilo do conteúdo é italico   
+            <strong>s</strong>  - Usado para riscar uma palavra
+            <strong>u</strong>  - Underline, é usado para fazer com o conteúdo da tag, fique todo com underline       
+            <strong>sup</strong> -  Conteúdo da tag fica superior na linha, semelhante a um expoente
+            <strong>sub</strong> - Conteúdo da tag fica abaixo da linha
+            <strong>section</strong> - É uma header não semântica, é normalmente usado para dividir conteúdo da pagina em seções não semânticas
+
+        </pre>
+
+
+
+        <p><strong>Box-Level</strong> - São tags que ocupam 100% da largura da página</p>
+        <pre>
+            <strong>p</strong> - É uma tag de paragrafo, e ocupa 100% da largura da página, não deve colocar tags box level dentro de p
+        </pre>
+        <p><strong>Inlinve-Level</strong> - São tags que apenas ocupam o espaço do seu conteúdo(sem margin, padding, width, height e etc).
+
+            <pre>
+            <b>span</b> - Tag não semântica semalhante a div, porém in-line level
+            <b>a</b> - Tag usada para criar links
+            </pre>
+
+        <p><strong>Tags sem fechamento</strong>- São tags que não precisam de uma tag de fechamento</p>
+
+        </p>
+
+    <h2>Regular Tags</h2>
+    <h3>Tags de head</h3>
+        <b>base</b> - Permite que todas as tags do documento html atual, usem caminhos relativos a URL base, ou seja com essa tag é possível usar caminhos relativos personalizados dentro de um documento html
+
+
+    <h3>Tags de body</h3>
+    <b>a</b> - É uma tag usada para criar links para partes do documento atual, ou links para acessar documentos externos
+    <pre>
+        href - Define o documento/arquivo a ser acessado pelo link
+        target - Define se o arquivo vai ser aberto em uma nova aba, ou na aba atual, ou seja define onde o documento vai ser aberto
+        rel - Define a relação desse documento externo/interno com o documento atual
+    </pre>
+
+    
+    <b>img</b> - Usado para adicionar imagens no documento html
+    <pre>
+        href - Define o caminho/url da imagem a ser inserida no documento
+        width - Define a largura da imagem
+        height - Define a altura da imagem
+        alt - Texto alternativo que descreve a imagem
+    </pre>
+    
+    <b>pre</b> - Tag mantém a mesma identação do arquivo html, ou seja o conteúdo dessa tag fica igualmente identado, que nem no html, não se deve colocar tags box level dentro dessa tag
+
+    <b>q</b> - Tag quote, usada para citar referências frases
+    <PRE>
+        cite - Define de onde foi tirado a referência/citação
+    </PRE>
+
+    <b>blockquote</b> - Tag usada para citações mais longas
+    <pre>
+        cite - Define de onde a citação foi retirada
+    </pre>
+
+    <b>hr</b> - Horizontal row, tag desenha uma linha horizontal box level na pagina
+
+    <b>code</b> - Tag deixa conteúdo com fonte mono-espaçada
+
+    <b>hgroup</b> - Usado para agrupar cabeçarios
+    
+    <b>dl</b> Definition list - Usado para fazer uma lista de definições
+    <pre>
+        <b>dt</b> - Data term - Termo da lista de definição 
+        <b>dd</b> - Data definition - Definição do termo
+    </pre>
+    
+    <b>Fieldset</b> - Cria uma box com bordas já implementadas
+    <b>legend </b> - Legenda da caixa fieldset
+
+    <B>datalist</B> - Cria uma lista valores que servirão de opções para input's, é espcialmente util, quando se quer permitir que o usuário apenas escolha valores da lista, a lista de opções é apresentada quando o usuário interage com o campo/input a ser preenchido
+    <pre>
+        option - É uma opção dentro desta lista de opções, cada opção vai ter apenas um valor, pode ter um atributo label, para aplicar um rótulo sobre o input
+        OBS: Datalist é uma lista de sugestões de opções de valores, ou seja o usuário não é obrigado a digitar nenhum valor da lista de opções/sugestões
+    </pre>
+    <br>
+    <b>select</b> - Implementa uma lista de opções pré definidas onde uma variavel só vai poder ter os valores que estiverem na lista, a tag option dentro de select tem corpo, e tem que ter valores a serem enviados para a variavel do select, ou seja na tag select o usuário só pode escolher as opções listadas, enquanto na datalist, o usário pode não seguir sugestões
+    optgroup - Usado para agrupar conjunto de opções sem corpo com label em uma tag select, ou seja um conjunto de opções vai ser agrupado por um label/rótulo
+
+
+    <b>textarea</b> - Caixa de feedback
+
+
+    <h3>Tabelas</h3>
+    <b>Table</b> - Usado para criar tabelas
+    <pre>
+        caption - legenda da tabela    
+
+        thead - Cabeçalho da tabela
+
+        tbody - Corpo de uma tabela
+
+        -th- table head - titulo de uma coluna vertical/horizontal
+        -tr- table row - Usado para criar uma linha
+        -td - table data - Dados de uma coluna, ou celula para dados de tabela
+
+        tfoot - Rodapé de uma tabela
+
+            colspan - Número de colunas que uma celula ocupa
+            rowspan - Número de linhas que uma celula ocupa
+        
+    </pre>
+
+    <h3>Formulários</h3>
+        Formulários são campos a serem preenchidos para enviar ou receber dados de um servidor
+        
+        
+        form - Tag usada para criar Formulários
+        <pre>
+            action - Define o endereço onde vai ser enviado/recebido os dados do Formulários
+            method - Define qual metódo vai ser usado para enviar os dados do formulário na requisição(normalmente o post)
+            target - Define em qual pagina/guia vai ser aberta a requisição
+            autocomplete(off, on) - Ativa ou desativa a sugestão de preenchimento nos formulários
+        </pre>
+
+        label - É um rótulo ou caixa que vai ser usada para descrever o input, ou mostrar informações sobre o input
+            <pre>
+                forid - Associa o rótulo a um input, a associação é feito por id
+            </pre>
+
+
+        input - Tag usada para receber dados:
+            <pre>
+                type -  Define o tipo de input:
+                    text - Input's para envio de textos
+                    checkbox - Input envia valor padrão se for marcado caso contrário não envia nada
+                    radio - Input que só pode selecionar uma opção, ou seja esse input tenha uma unica variavel, que pode receber varios valores dependendo da opção marcada
+                    date - Usado para enviar datas
+                    datetime-local - Usado para enviar data e hora
+                    time - Usado para enviar horas
+                    color - Usado para enviar cor
+                    email - Usado para enviar emails
+                    file - input para enviar arquivos
+                    number - input para números
+                    password - Input para senhas
+                    range - input para intervalos
+                    url - input para receber URL
+                    search - Input semântico de busca
+                    tel - input do tipo telefone
+
+
+                name -  É o nome da variavel que vai representar o input no back-end
+                value - É O valor enviado ao servidor, ou seja o valor da variavel
+                placeholder - Descrição do input
+                required  - Torna obrigatório o preenchimento do input
+                accept - Define quais valores são aceitos no input, separar cada valor por virgula
+                checked - input checkbox já começa marcado
+                multiple - Permite selecionar multiplos arquivos
+                min - Valor minimo de um input númerico
+                max - Valor máximo de um input númerico
+                step - de quanto em quanto pula em um input númerico
+            </pre>
+        </body> 
+
+
+        button - Usado para realizar uma ação, ou emitir um signal na pagina
+        <pre>
+            Type: - O tipo de botão
+                submit - Confirma conclusão do formulário e envia dados ao servidor
+                reset - Limpa todos os campos do formulário
+        </pre>
+
+        OBS: Input's checkbox precisam enviar valor para o servidor
+        </html>

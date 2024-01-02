@@ -1,0 +1,368 @@
+* {
+    padding: 0px;
+    margin: 0px;}
+
+a {
+    text-decoration: none;}
+
+[textwhite] {
+    color: white;
+    
+}
+
+[centraliza] {
+    margin: auto;
+}
+
+[page~="mainbg"] {
+    background-color: #170055;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='280' height='280' viewBox='0 0 800 800'%3E%3Cg fill='none' stroke='%23000000' stroke-width='1'%3E%3Cpath d='M769 229L1037 260.9M927 880L731 737 520 660 309 538 40 599 295 764 126.5 879.5 40 599-197 493 102 382-31 229 126.5 79.5-69-63'/%3E%3Cpath d='M-31 229L237 261 390 382 603 493 308.5 537.5 101.5 381.5M370 905L295 764'/%3E%3Cpath d='M520 660L578 842 731 737 840 599 603 493 520 660 295 764 309 538 390 382 539 269 769 229 577.5 41.5 370 105 295 -36 126.5 79.5 237 261 102 382 40 599 -69 737 127 880'/%3E%3Cpath d='M520-140L578.5 42.5 731-63M603 493L539 269 237 261 370 105M902 382L539 269M390 382L102 382'/%3E%3Cpath d='M-222 42L126.5 79.5 370 105 539 269 577.5 41.5 927 80 769 229 902 382 603 493 731 737M295-36L577.5 41.5M578 842L295 764M40-201L127 80M102 382L-261 269'/%3E%3C/g%3E%3Cg fill='%23180018'%3E%3Ccircle cx='769' cy='229' r='8'/%3E%3Ccircle cx='539' cy='269' r='8'/%3E%3Ccircle cx='603' cy='493' r='8'/%3E%3Ccircle cx='731' cy='737' r='8'/%3E%3Ccircle cx='520' cy='660' r='8'/%3E%3Ccircle cx='309' cy='538' r='8'/%3E%3Ccircle cx='295' cy='764' r='8'/%3E%3Ccircle cx='40' cy='599' r='8'/%3E%3Ccircle cx='102' cy='382' r='8'/%3E%3Ccircle cx='127' cy='80' r='8'/%3E%3Ccircle cx='370' cy='105' r='8'/%3E%3Ccircle cx='578' cy='42' r='8'/%3E%3Ccircle cx='237' cy='261' r='8'/%3E%3Ccircle cx='390' cy='382' r='8'/%3E%3C/g%3E%3C/svg%3E");
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+[marginBP] {
+    margin-bottom: 2rem;
+}
+
+
+[marginBG] {
+    margin-bottom: 4rem;
+}
+
+[page~="landpage"] {
+    min-height: 100vh !important;
+    max-height: max-content;
+    padding: 3rem;
+    padding-top: 8rem;
+}
+
+[page~="simetry"] {
+    max-width: 80rem;
+    margin: auto;
+}
+
+
+[form1] {
+    display: flex;
+    flex-direction: column;
+}
+
+[div1], [div2]{
+    width: 45%;
+}
+
+[maxminlenght] {
+    max-width: 40rem;
+}
+[maxlenght] {
+    max-width: 80rem;
+}
+
+[alinhaS] {
+    text-align: start;
+}
+
+[alinhaC]{
+    text-align: center;
+}
+
+[alinhaJ]{
+    text-align: justify;
+}
+
+[font2] {
+    font-size: 2rem;
+    
+}
+
+[font3] {
+    font-size: 3rem;
+}
+
+[font4] {
+    font-size: 4rem;
+}
+
+[font5] {
+    font-size: 5rem;
+}
+
+[divcontact] {
+    display: flex; 
+    gap: 3rem;
+    margin-bottom: 8rem;
+}
+
+
+html {
+    /*Tamanho da font é 50% do padrão da fonte que é 16px*/
+    font-size: 10px;}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1.6rem;
+    scroll-behavior: smooth;
+}
+
+h1, h2, h3{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    max-height: 4.5rem;
+    
+    background-color: white;}
+
+header h1, header nav {
+    flex-grow: 1;}
+
+header h1 {
+    margin-left: 2rem;
+    text-align: start;}
+
+header nav { 
+    display: inline-flex;
+    height: 4.2rem;
+}
+
+nav a {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    width: 100%;
+    
+}
+
+header nav a:hover::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    content: '';
+    width: 100%;
+    height: 0.2rem;
+    background-color: purple;
+    transition: all 600ms ease-in-out;
+}
+
+.intro1 {
+    color: white;
+    display: flex;
+    flex-wrap: wrap;    
+
+    text-align: justify;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro1 div h1 {
+    margin-bottom: 2rem;
+}
+
+.pretop {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.pretop div p {
+    font-size: 3rem;
+}
+
+
+.hbloco h1{
+    font-size: 8rem;
+}
+
+.hbloco p {
+    font-size: 3rem;
+}
+
+.blocos{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 8rem;
+    justify-content: space-evenly;
+}
+
+.bloco1, .bloco2, .bloco3 {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 1;
+
+    max-width: 30rem;
+    max-height: max-content;
+    font-size: 2.5rem;
+    flex-wrap: wrap;
+}
+.bloco1 h1, .bloco2 h1, .bloco3 h1 {
+    font-size: 4rem;
+    position: relative;
+    margin-bottom: 10rem;
+}
+
+
+
+.bloco1 h1::before{
+    text-align: center;
+    display: inline-block;
+    width: max-content;
+    margin-right: 0.4rem;
+    content: '1 ';
+    transform: rotate(10deg);
+} 
+.bloco2 h1::before{
+    text-align: center;
+    display: inline-block;
+    width: max-content;
+    margin-right: 0.4rem;
+    content: '2 ';
+    transform: rotate(10deg);
+}
+.bloco3 h1::before {
+    text-align: center;
+    display: inline-block;
+    width: max-content;
+    margin-right: 0.4rem;
+    content: '3 ';
+    transform: rotate(10deg);
+}
+
+
+.conteudo2 {
+    margin-bottom: 3rem;
+}
+
+.conteudo2 h1 {
+    font-size: 5rem;
+}
+
+.conteudo2 p {
+    font-size: 2rem;
+}
+
+
+.pics {
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10rem;
+    justify-content: space-evenly;
+    max-width: 90rem;
+}
+
+.mypic1 {
+    height: 25rem;
+    width: 25rem;
+    background-image: url("https://img.freepik.com/fotos-gratis/estrada-iluminada-na-floresta-no-periodo-nocturno_23-2148282343.jpg?w=826&t=st=1697918096~exp=1697918696~hmac=6d545514e1cef2d4d8eae590618fcbe7883ed789f745b38b44ae920d3bf00d22");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+} 
+
+.mypic2 {
+    height: 25rem;
+    width: 25rem;
+    background-image: url("https://img.freepik.com/fotos-gratis/fundo-de-rua-de-toquio-moderno_23-2149394914.jpg?w=360&t=st=1697917817~exp=1697918417~hmac=c6fb2697665c7153d8ff9f97f55b555da501c4b7211c480e785f05e395300101");
+    
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.mypic3 {
+    height: 25rem;
+    width: 25rem;
+    background-image: url("https://img.freepik.com/fotos-gratis/sinal-de-banheiro-de-luz-neon-a-noite_23-2150002441.jpg?w=826&t=st=1697917848~exp=1697918448~hmac=7baa20865ef600d6be1df130373e84c684e65760c90f7b8ef6e8101f208d080f");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.mypic4 {
+    height: 25rem;
+    width: 25rem;
+    background-image: url("https://img.freepik.com/fotos-gratis/design-de-vapor-com-pingos-de-chuva_23-2148227213.jpg?w=826&t=st=1697917948~exp=1697918548~hmac=c2fd77a60ecd559da0b33be2b1020d097e4f4ca8e2cda4acc9bb8e06fcda861b");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.mypic5 {
+    height: 25rem;
+    width: 25rem;
+    background-image: url("https://img.freepik.com/fotos-gratis/memorial-da-segunda-guerra-mundial-washington-dc_649448-809.jpg?w=826&t=st=1697918038~exp=1697918638~hmac=1261cdaf40df73cba7d67e2d743390c7577b09dd48266e56e3297cdfd8c3f771");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.mypic6 {
+    height: 25rem;
+    width: 25rem;
+    background-image: url("https://img.freepik.com/fotos-gratis/skyline-do-centro-da-cidade-de-nova-york-com-arranha-ceus-e-paisagem-urbana-a-noite_649448-2529.jpg?w=740&t=st=1697918385~exp=1697918985~hmac=b01f31b8406a2941cda3998047e1bdf9405f8e4297c69739ac79cd79b277d1ae");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.mypic1:hover, .mypic2:hover, .mypic3:hover, .mypic4:hover, .mypic5:hover, .mypic6:hover {
+    background-size: 110% 110%;
+    background-position: center right;
+}
+
+.tabela {
+    max-width: 60rem;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    overflow-x: auto;
+}
+
+table {
+    border-collapse: unset;
+    width: 50rem;
+    height: 30rem;
+}
+
+th, tfoot{
+    background-color: gainsboro;
+}
+td, th {
+    padding: 0.4rem;
+}
+
+.formulario {
+    width: 100%;
+    display: flex; 
+    font-size: 2rem; 
+    flex-wrap: wrap; 
+    justify-content: space-between !important;
+}
+
+form {
+    width: 100%;
+}
+[altura] {
+    height: 5rem;
+}
+
+[finish] {
+    cursor: pointer;
+    margin: auto;
+    display: block;
+    font-size: 2rem;
+    height: 6rem;
+    width: 18rem;
+    color: white;
+    font-size: bold;
+    border: 5px solid white;
+    background-color: #170055;
+}

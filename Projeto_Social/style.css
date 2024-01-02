@@ -1,0 +1,83 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("imagens/fundo-madeira.jpg");
+    background-size: cover;
+    background-repeat: no-repeat; 
+    background-position: center center;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    background-attachment: fixed;
+}
+
+
+.phone {
+    background-image: url("imagens/frame-iphone.png");
+    position: absolute;
+    width: 311px;
+    height: 627px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+a {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border-radius: 50%;
+    left: 94%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    box-sizing: border-box;
+}
+
+#social > a:hover {
+    border: 1px solid rgba(0, 0, 0, 0.336);
+    transform: translate(-3px, 3px);
+}
+
+iframe {
+    position: absolute;
+    width: 270px;
+    left: 6.666666666%;
+    top: 80px;
+    height: 476px;
+}
+
+.back {
+    width: 45px;
+    height: 45px;
+    left: 50%;
+    top: 624px;
+    transform: translate(-50%);
+}
+
+#youtube {
+    top: 13%;
+    background-image: url("imagens/logo-youtube.jpg");
+}
+
+#github {
+    top: 21%;
+    background-image: url("imagens/logo-github.jpg");
+}
+
+#instagram {
+    top: 29%;
+    background-image: url("imagens/logo-instagram.jpg");
+}
+
+#twitter {
+    top: 37%;
+    background-image: url("imagens/logo-twitter.jpg");
+}
+
+#facebook {
+    top: 45%;
+    background-image: url("imagens/logo-facebook.jpg");
+}
